@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1720">
+  <meta name="description" content="Enigma OS — a personal project command centre.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Enigma OS">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>Enigma OS — Project Command Centre</title>
+</head>
+<body>
+<div class="app-shell" id="appShell">
+  <aside class="sidebar">
+    <a class="brand" href="#projects" aria-label="Enigma OS home"><span class="brand-mark">✳</span><span><strong>ENIGMA<span class="brand-accent">OS</span></strong><small>YOUR PERSONAL UNIVERSE</small></span></a>
+    <div class="sidebar-section-label">WORKSPACE</div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <button class="nav-item active" data-view="projects"><span class="nav-icon">◫</span>Projects <span class="nav-count" id="navProjectCount">0</span></button>
+      <button class="nav-item" data-view="today"><span class="nav-icon">▦</span>Today</button>
+      <button class="nav-item" data-view="countdowns"><span class="nav-icon">◷</span>Countdowns</button>
+      <button class="nav-item" data-view="habits"><span class="nav-icon">♡</span>Life & Habits</button>
+      <button class="nav-item" data-view="achievements"><span class="nav-icon">✧</span>Achievements</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-quote"><span class="small-caps">THE MISSION</span><p>Make progress visible.<br>Make living less administrative.</p><span class="tiny-spark">✳ &nbsp; one little spark at a time</span></div>
+      <button class="nav-item" id="openSettings"><span class="nav-icon">⚙</span>Settings & backup</button>
+      <div class="version">ENIGMA OS <span>v0.1 · local-first</span></div>
+    </div>
+  </aside>
+  <main class="main-content" id="mainContent">
+    <header class="topbar"><div class="topbar-left"><span class="online-dot"></span><span id="topbarDate"></span></div><div class="topbar-right"><span class="saved-pill" id="saveState">● Saved on this device</span><button class="icon-button" id="topSettings" title="Settings and backups" aria-label="Settings and backups">⚙</button></div></header>
+    <div class="page-content" id="pageContent"></div>
+  </main>
+  <nav class="bottom-nav" aria-label="Mobile navigation">
+    <button class="bottom-nav-item active" data-view="projects"><span>◫</span><small>Projects</small></button>
+    <button class="bottom-nav-item" data-view="today"><span>▦</span><small>Today</small></button>
+    <button class="bottom-nav-item" data-view="countdowns"><span>◷</span><small>Events</small></button>
+    <button class="bottom-nav-item" data-view="habits"><span>♡</span><small>Habits</small></button>
+    <button class="bottom-nav-item" data-view="achievements"><span>✧</span><small>Badges</small></button>
+  </nav>
+</div>
+<div id="overlayRoot"></div>
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
